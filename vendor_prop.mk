@@ -111,7 +111,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.vidc.enc.disable_pframes=1 \
     vendor.vidc.enc.disable.pq=true \
     vendor.vidc.enc.narrow.searchrange=1 \
-    vendor.video.disable.ubwc=1
+    vendor.video.disable.ubwc=1 \
+    media.stagefright.thumbnail.prefer_hw_codecs=true
 
 # Memory optimizations
 PRODUCT_PROPERTY_OVERRIDES += \
