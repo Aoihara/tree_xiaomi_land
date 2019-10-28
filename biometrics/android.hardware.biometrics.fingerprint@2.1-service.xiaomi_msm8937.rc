@@ -6,3 +6,29 @@ service fps_hal /vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-servi
     user system
     group system input
     disabled
+
+service vendor.gx_fpd /vendor/bin/gx_fpd
+    class core
+    user root
+    group system system
+    disabled
+
+on boot
+    # Goodix Fingerprint
+    chown system system /dev/goodix_fp
+    chmod 0644 /dev/goodix_fp
+
+    setprop persist.sys.fp.vendor none
+    start vendor.gx_fpd
+
+on property:persist.sys.fp.vendor=switchf
+    stop vendor.gx_fpd
+    setprop persist.sys.fp.vendor searchf
+    setprop ro.boot.fpsensor fpc
+    start vendor.fps_hal
+
+on property:persist.sys.fp.vendor=goodix
+    setprop persist.sys.fp.onstart 1
+    setprop ro.boot.fpsensor gdx
+    setprop ro.hardware.fingerprint goodix
+    start vendor.fps_hal
