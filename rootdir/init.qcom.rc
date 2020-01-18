@@ -233,6 +233,10 @@ on boot
     chown system system /sys/class/sensors/apds9930-proximity/enable
     chown system system /sys/class/sensors/apds9930-proximity/poll_delay
 
+    # Fix permission to set cpu5 and cpu6 online
+    chmod 644 /sys/devices/system/cpu/cpu5/online
+    chmod 644 /sys/devices/system/cpu/cpu6/online
+
     # Create directory used for display
     # for backward compatibility
     mkdir /persist/display 0770 system graphics
