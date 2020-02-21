@@ -19,8 +19,7 @@ VENDOR_PATH := device/xiaomi/msm8937-common
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
-    $(VENDOR_PATH)/overlay \
-    $(VENDOR_PATH)/overlay-lineage
+    $(VENDOR_PATH)/overlay
 
 # Properties
 -include $(VENDOR_PATH)/vendor_prop.mk
@@ -363,10 +362,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     $(VENDOR_PATH)/configs/thermal-engine.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine.conf
-
-# Trust HAL
-PRODUCT_PACKAGES += \
-    vendor.lineage.trust@1.0-service
 
 # USB
 PRODUCT_PACKAGES += \
