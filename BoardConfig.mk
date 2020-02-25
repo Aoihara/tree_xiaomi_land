@@ -238,8 +238,12 @@ TARGET_USES_OLD_MNC_FORMAT := true
 TARGET_RECOVERY_FSTAB 		 := $(DEVICE_PATH)/rootdir/fstab.qcom
 
 # SELinux
-include device/qcom/sepolicy-legacy-um/sepolicy.mk
-BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
+include device/qcom/sepolicy/sepolicy_legacy.mk
+include vendor/omni/sepolicy/sepolicy.mk
+BOARD_SEPOLICY_DIRS += \
+     $(DEVICE_PATH)/sepolicy \
+     $(DEVICE_PATH)/sepolicy/msm8937
+
 SELINUX_IGNORE_NEVERALLOWS := true
 
 #Treble
