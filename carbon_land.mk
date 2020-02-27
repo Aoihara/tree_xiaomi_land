@@ -20,16 +20,18 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_m.mk)
 
-# Inherit some common Lineage stuff
-$(call inherit-product, vendor/aosip/config/common_full_phone.mk)
+# Inherit some common CarbonROM stuff
+$(call inherit-product, vendor/carbon/config/gsm.mk)
+$(call inherit-product, vendor/carbon/config/common.mk)
 
 # Inherit from land device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := land
+PRODUCT_MODEL := Redmi 3s
 PRODUCT_MANUFACTURER := Xiaomi
-PRODUCT_NAME := aosip_land
+PRODUCT_NAME := carbon_land
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
@@ -40,5 +42,3 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 
 BUILD_FINGERPRINT := Xiaomi/land/land:6.0.1/MMB29M/V10.2.1.0.MALMIXM:user/release-keys
 
-PRODUCT_SYSTEM_PROPERTY_BLACKLIST += \
-    ro.product.model
