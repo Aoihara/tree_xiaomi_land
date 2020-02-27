@@ -863,12 +863,12 @@ vendor/lib/libperipheral_client.so|b75a6adac094ddcd6ded9415cae83e18d1e7e5d0
 vendor/lib64/libperipheral_client.so|20c8ab21fe28e41f60b59af0ba72de9f6b1996d2
 
 # Power-off alarm - from tissot - PKQ1.180917.001.V10.0.4.0.PDHMIXM
--vendor/app/PowerOffAlarm/PowerOffAlarm.apk|3fbc64ee84b17eaaf5f9002b58f4615216de0389
-vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service|b7f648c81773214202aaa3620863d048c90713c7
-vendor/bin/power_off_alarm|459ccd83df3fcc076bb82bff60f47d14ad69ad6e
-vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc|c9877b6cae0353d5fdea5bc23dba77101b3d6980
-vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so|df138b77fb116a1a786a70c9c76b69d61b5c04d2
-vendor/lib64/vendor.qti.hardware.alarm@1.0.so|5761eae471e8dcd94ce139e831a1aa5b23f133c6
+-product/app/PowerOffAlarm/PowerOffAlarm.apk|2399da8803ff7229476611f371fc435f48138881 
+vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service|ff31b10944e315ca5db342232886d4d110a012af
+vendor/bin/power_off_alarm|22e0d6e5cab225cb430b2c860f480b43103a4701
+vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc|c9877b6cae0353d5fdea5bc23dba77101b3d6980 
+vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so|4f91100fd7b0b69a0bc13677af9f8b7b7c354f2c
+vendor/lib64/vendor.qti.hardware.alarm@1.0.so|680d4ad1999c8db44ee7d6240dda4ec1873e4c4d
 
 # QMI - from tissot - PKQ1.180917.001.V10.0.4.0.PDHMIXM
 etc/permissions/qti_libpermissions.xml|ef3c88495f2f61a2d16e1445113a9d80f8db0e0a
@@ -987,10 +987,10 @@ vendor/lib/libthermalclient.so|523476e106337823696f0600b48f057d8c629465
 vendor/lib64/libthermalclient.so|796c3e071fe9d6fa57598e1205a762cb55720f88
 vendor/lib64/libthermalioctl.so|6eed5b8ca6989809eac27abd4af19bbd6f3845ee
 
-# Time services - from tissot - PKQ1.180917.001.V10.0.4.0.PDHMIXM
--vendor/app/TimeService/TimeService.apk|78109530538aa8fb533ad288c9d356c57481a10e
-vendor/bin/time_daemon|bc58af8ed0cc94708aa75372565f4251991ab123
-vendor/lib64/libtime_genoff.so|8f4c1f9ace6af463b241b130d6872b5d39cc7b2a
+# Time services - from LA.UM.8.6.r1-02600-89xx.0
+-vendor/app/TimeService/TimeService.apk|4a37afd1395758d946580af184a738e3c657b1e2 
+vendor/bin/time_daemon|b7140b137f91e6706a074fdab9cb24bd17572eff
+vendor/lib64/libtime_genoff.so|3c84c33b565008682681e3dbdcac7c6312e060ce
 
 # Widevine - from daisy - PKQ1.180917.001.V10.0.1.0.PDLMIFJ
 vendor/bin/hw/android.hardware.drm@1.1-service.widevine|9743c4ecd0fb8773795bcbfbb406f25616c04129
