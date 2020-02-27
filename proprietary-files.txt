@@ -804,29 +804,32 @@ vendor/lib/vendor.qti.voiceprint@1.0.so|ad4df37a1240290f2c1d678d751a0401509b343f
 vendor/lib64/hw/sound_trigger.primary.msm8953.so:vendor/lib64/hw/sound_trigger.primary.msm8937.so|62a3b3814deefbb1a83759fea4b6b705af6b36af
 vendor/lib64/vendor.qti.voiceprint@1.0.so|5c3794e4541cc916c03f5a2ba26c6c2f43149d16
 
-# Media - from tissot - PKQ1.180917.001.V10.0.4.0.PDHMIXM
-lib/extractors/libmmparser.so|6c50c5d01ceff647de389f3f15b1952c2bcdd2d7
-lib/libFileMux.so|5961dd16c9c6808e8321abf4b0266a9926ef327b
-lib/libmmosal.so|89a3c4404de99e9ee740aeea1883c15470d61a74
-lib/libmmparser_lite.so|db9e6dafd466fd0aa3b2d7b387fda38ee9838a08
-lib/libOmxMux.so|6aff8e6e81331f3d5d3a8d46d342e5b5efc237f3
-lib64/libmmosal.so|3d50c7ea56db9c3676be9d6e36e1030386ecdb02
-vendor/lib/libgpustats.so|83d8856717923ab389aecf17445e33fc21b90afc
-vendor/lib/libmmosal_proprietary.so|51d9cbf713f06e07d3f8aa65640f7251e9b3a808
-vendor/lib/libOmxAacDec.so|feacef5e0d1e68a54d9fe6a78ee52f4490696f3d
-vendor/lib/libOmxAlacDec.so|e74385d700fe898b0075cd0742fc7db162564a50
-vendor/lib/libOmxAlacDecSw.so|3b4ef8fd510e91df8c440447c03a8a42bac23752
-vendor/lib/libOmxAmrDec.so|5b399fa755cf9d7722ffd7225fe6f23dfc182185
-vendor/lib/libOmxAmrwbplusDec.so|23cc041078de2ca4a6a44e8eb756b74df0a3b1ca
-vendor/lib/libOmxApeDec.so|2f3cb8de2efb00c93688b86f1b55e96de3752b4b
-vendor/lib/libOmxApeDecSw.so|5a8bbc06b9cf680f1c5012660c82f37331559f77
-vendor/lib/libOmxEvrcDec.so|6a50e069ae8b769c7c97bf0398557112d105b183
-vendor/lib/libOmxQcelp13Dec.so|c094a365bd872d93e553d50fd65dc3d93ef1f486
-vendor/lib/libOmxVpp.so|0c37dd16995e08be116a3d560fb3465619de0940
-vendor/lib/libOmxWmaDec.so|015c01595f055fe92ba7210cb9a5bec4a38a06ee
-vendor/lib/libvpplibrary.so|77d1d8d7fa879d1c5df1fb4e210de1e715bf139e
-vendor/lib/libvqzip.so|0b906db131e99cd5460b8a72d05e86721243de95
-vendor/lib64/libgpustats.so|35eaab728b21fe7cd33b821bf5cf13ea1117cd90
+# Media - from LA.UM.8.6.r1-02900-89xx.0
+lib/extractors/libmmparserextractor.so|0d7dc41270c150a24901adeb41dbc2f8be74f973
+lib/libFileMux.so|1c713da8d18f03deb33c3211761fc07dd57d6946
+lib/libmmosal.so|ebc0924623bc5cd5efdcfea984b555ee4855dae4
+lib/libmmparser_lite.so|71a01e4a598fe10ac4bff974b49ce4e37b6e33c4
+lib/libOmxMux.so|6f1a1f5fc8f9a8683e6fb719b6fe51a68c6b0e84
+lib64/libmmosal.so|c06697b161d3ebb9bd2032a82151dc169910d6f7
+-vendor/lib/libgpustats.so|b5483e75e9bed81e58990bff8009f50d3e746ccf
+vendor/lib/libI420colorconvert.so|0dfd4d0e49f4250e98e781483048a296a679e05e
+vendor/lib/libmm-color-convertor.so|7c74d36d42dc79fc58afe0f4323b76cc1297d36e
+vendor/lib/libmmosal_proprietary.so|470c2b69b4af88dff40b386f09a20be4e2bcddb6
+vendor/lib/libOmxAacDec.so|bd4189758cce2afe0b8fd85719d334f6335dc3c3
+vendor/lib/libOmxAlacDec.so|887e641f7ecd32eba21de6e0f962053072099be1
+vendor/lib/libOmxAlacDecSw.so|8700268f92a953549e5936af9d5ccd08f99ed50f
+vendor/lib/libOmxAmrDec.so|8bb4d90f61f6730c2728833da4a926c7540f8ad6
+vendor/lib/libOmxAmrwbplusDec.so|51b1300ca6e5fd7dbfccf214ccdab3e5f44b2aff
+vendor/lib/libOmxApeDec.so|f034236491c4b5560276c52fa3b487f4b6cf07d8
+vendor/lib/libOmxApeDecSw.so|d1276d42ad37fbd263ab96f9f353d4e782bb0fe9
+vendor/lib/libOmxDsdDec.so|57760dbfd7098d5f1c1c8fb12973f715ba30aac6
+vendor/lib/libOmxEvrcDec.so|20a6be418df26f48751b4178f5642e3fc6902690
+vendor/lib/libOmxG711Dec.so|567b1698b1313faa0fbd1f80f7a31d761bdf7d7d
+vendor/lib/libOmxQcelp13Dec.so|27a75185e62e88ea84ac2448a3842c998899ae90
+vendor/lib/libOmxVideoDSMode.so|84a6b99f5ad0c7dbe827eb01258cca4c790c0fe7
+vendor/lib/libOmxWmaDec.so|404ae6ea303634d96d3ee46bee2c6f898fa46c15
+vendor/lib/libvqzip.so|24e5eb30e5a2cdb544c8688d81d7cc75a1d85eaf
+-vendor/lib64/libgpustats.so|dce30d94a6446651c463f9e33213dc6e37b999e3
 
 # Media OMX - from TA-1025_00WW 8.1.0 OPR1.170623.026
 vendor/lib/libMpeg4SwEncoder.so|971eb18b4209287f7c078c082508ebc46c11de0e
