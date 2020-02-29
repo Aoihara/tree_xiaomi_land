@@ -1,4 +1,0 @@
-allow system_server radio_prop:property_service set;
-
-# Input devices
-r_dir_file(system_server, keylayout_file);
