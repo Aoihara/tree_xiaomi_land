@@ -744,10 +744,10 @@ vendor/firmware/a530v3_gpmu.fw2|0a2f6f450231673d75ba39e5d28776db3becf810
 vendor/firmware/a530v3_seq.fw2|8963a53acc689725dee4b22881a4dd4b80e5def8
 
 # IMS - from LA.UM.8.6.r1-01900-89xx.0
-product/lib64/libimscamera_jni.so|7cb89110cca94d37d68c705f12a7a5a4ee106139
-product/lib64/libimsmedia_jni.so|e50217e9eb8878136614db66313508ac970a2b42
--product/priv-app/ims/ims.apk|ce41daca328db67984843588e8bafa7e0eb53a0a
-product/etc/permissions/telephony_product_privapp-permissions-qti.xml|0536410f98ef3be8ca7630ba8e9383e41e423ceb
+product/lib64/libimscamera_jni.so|41fd9faa10818c9f7c5a14d372a07f79b0ca0daa
+product/lib64/libimsmedia_jni.so|448795a73bbf72fc0c9876f86a13769139ea8022
+-product/priv-app/ims/ims.apk|a3d6918dfe1abbcce807abb5f74cfd642485559f
+vendor/lib64/vendor.qti.ims.rcsconfig@1.1.so|936011dbcfd05ea9350f7410bb6f4d69ddd3fb61
 
 # IMS - from tissot - PKQ1.180917.001.V10.0.4.0.PDHMIXM
 -app/uceShimService/uceShimService.apk|d2ecdb607749b0496664db52b706e9340bd9b9f0
@@ -881,7 +881,6 @@ vendor/lib/libidl.so|6fe7c2a4e4ec0ac099a6306c3111e6497e2c501f
 vendor/lib/libqdi.so|6cb8c78aaa70a5fa9b83e260556bada097ca0d14
 vendor/lib/libqdp.so|ff0b9d7d1a72fc884264ca0487540c75af5b6c6a
 vendor/lib/libqmi.so|0b035dd37319391f27ce6647e707f4e7afaacec0
-vendor/lib/libqmi_cci.so|3e16a5da1ca2b554c854aef3c20d1fea5d642a54
 vendor/lib/libqmi_client_helper.so|9815eaaffec80f83bfb6736e78a3baf44242aa0c
 vendor/lib/libqmi_client_qmux.so|8a5c4e165cdebce11a3492e72bc29e1d4bf184e1
 vendor/lib/libqmi_common_so.so|873e94bc4a028ad396f947efde042b4a26d28f63
@@ -895,13 +894,19 @@ vendor/lib64/libidl.so|3b1a7ca55ccfe06d12d62f2c214b5ac2ee0e69da
 vendor/lib64/libqdi.so|5e14939265c9f30c59f4a7964bf83da69ecfa38d
 vendor/lib64/libqdp.so|485c40c20d4421b5b2a1e2e87555c566f49ea944
 vendor/lib64/libqmi.so|f814a152f974b2305f74f90a4f1c0a20989fb253
-vendor/lib64/libqmi_cci.so|acb022e3ae0380a705011177b44e852a35b17371
 vendor/lib64/libqmi_client_helper.so|ed00314bd9d2f68af0508640bb647bfdf5d582b2
 vendor/lib64/libqmi_client_qmux.so|cf7986589f2e14cc3b9c3ddb22d46dd71c25c9df
 vendor/lib64/libqmi_common_so.so|aa27730010968b2e05e3e46684cdf193738c2c8e
 vendor/lib64/libqmi_csi.so|5e3d7a6c18f10c30d152bd87cd24b0c787f6ded3
 vendor/lib64/libqmi_encdec.so|68fb631317150d66fd1a39c48f8ef9e0405bbdf2
 vendor/lib64/libqmiservices.so|842a1b61fad7dd34753e945ee2ada0fdc9589c09
+
+# QMI - from LA.UM.8.6.r1-02600-89xx.0
+vendor/lib/libpdmapper.so|0959fa03d43b08dea91a57ed6aea228751f80573 
+vendor/lib/libqmi_cci.so|df2e1f83ef1243efd3b15f98351f1407d32d5956 
+vendor/lib64/libpdmapper.so|b837641e006ff90a49764d7ac78553de537acd74 
+vendor/lib64/libqmi_cci.so|9e066cc4ceb721413db7e9a322836de981e92c74
+vendor/lib64/libqsocket.so|6264041e0e897f78dc9b6a4be6424cbd927669d0
 
 # Radio - MBN - from stock
 etc/firmware/modem_config/S88537AA1/cu_mcfg_sw.mbn:vendor/firmware/modem_config/S88537AA1/cu_mcfg_sw.mbn|9745582cdc59d44e1f2ee656ed06d301eaa95d8e
@@ -924,11 +929,17 @@ etc/firmware/modem_config/S88537AB1/ct_mcfg_sw.mbn:vendor/firmware/modem_config/
 etc/firmware/modem_config/S88537AB1/cmcc_mcfg_sw.mbn:vendor/firmware/modem_config/S88537AB1/cmcc_mcfg_sw.mbn|0e09a41e24f74c37932d6b7655767766486681eb
 etc/firmware/modem_config/S88537AB1/row_mcfg_sw.mbn:vendor/firmware/modem_config/S88537AB1/row_mcfg_sw.mbn|371c0f0a3ae8b20791a70acaca7068325edbfcce
 
-# qti-telephony - from LA.UM.8.6.r1-01900-89xx.0
-framework/qti-telephony-common.jar|532af9b997feab1f71c3a6457d14b7bec22fe6b6
-
-# qcrilmsgtunnel - from essential mata QP1A.190502.046
--priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|956a4017d0ba7f68e6d225e57b40d3b2bcbb4837
+# RIL - from LA.UM.8.6.r1-02900-89xx.0
+-product/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|71d083671c3ea4cd5e287a63fb254bb0ab60ed20 
+product/etc/permissions/telephony_product_privapp-permissions-qti.xml|68901007ba1a48ceb1b728fc3b5483dd51b5e3a0 
+product/framework/qti-telephony-common.jar|96154b2576114dd566bbc99a2d9af612de8849df 
+vendor/bin/adpl|5fba0bb0fe9eb4a4aa232763be47afc0739cafd2 
+vendor/etc/init/dataadpl.rc|cd4907d9bfd438fe5f5c86f5d6cec590ac0bac2a 
+vendor/etc/init/dataqti.rc|6abfd1a850d782adbbb6f42c9d8ca870036b2ad1 
+vendor/etc/init/netmgrd.rc|213d147cfcfe175aa4cdf1a345f3b148ea72982d 
+vendor/etc/init/port-bridge.rc|e52d61a0de5e8a3b21bfbfca929e862422645377 
+vendor/etc/init/vendor.qti.rmt_storage.rc|bc212c6353c2ded44ae4d759605fbbe55aa4fa3f
+vendor/etc/init/vendor.qti.tftp.rc|091915c28a3bc574d39189688748cc922d9e65e4
 
 # RIL - from tissot - PKQ1.180917.001.V10.0.4.0.PDHMIXM
 -app/datastatusnotification/datastatusnotification.apk|ceafcce87298531a3adb13a87709a1fd65291625
