@@ -1,0 +1,2 @@
+allow installd device:file { open write };
+allow installd mm-qcamerad_exec:file { getattr read };

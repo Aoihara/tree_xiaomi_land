@@ -1,0 +1,1 @@
+allow hwservicemanager mm-qcamerad_exec:file { getattr read };

@@ -1,0 +1,1 @@
+allow vold_prepare_subdirs mm-qcamerad_exec:file { getattr read };

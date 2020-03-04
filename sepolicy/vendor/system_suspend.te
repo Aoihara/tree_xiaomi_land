@@ -1,0 +1,1 @@
+allow system_suspend mm-qcamerad_exec:file { getattr read };

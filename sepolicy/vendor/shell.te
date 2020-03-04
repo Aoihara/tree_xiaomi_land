@@ -1,0 +1,1 @@
+allow shell mm-qcamerad_exec:file { getattr read };

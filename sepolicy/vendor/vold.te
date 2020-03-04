@@ -1,0 +1,1 @@
+allow vold mm-qcamerad_exec:file read;

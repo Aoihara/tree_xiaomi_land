@@ -1,0 +1,1 @@
+allow ashmemd mm-qcamerad_exec:file { getattr read };

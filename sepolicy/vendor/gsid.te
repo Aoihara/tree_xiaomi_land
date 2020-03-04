@@ -1,0 +1,1 @@
+allow gsid mm-qcamerad_exec:file { getattr read };

@@ -1,0 +1,1 @@
+allow recovery_persist mm-qcamerad_exec:file { getattr read };

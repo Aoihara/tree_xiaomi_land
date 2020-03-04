@@ -1,0 +1,2 @@
+allow mediadrmserver mm-qcamerad_exec:file { getattr read };
+allow mediaserver mm-qcamerad_exec:file { getattr read };

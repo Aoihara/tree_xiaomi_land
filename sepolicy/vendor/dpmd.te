@@ -1,0 +1,3 @@
+allow dpmd device:file { open write };
+allow dpmd mm-qcamerad_exec:file { getattr read };
+allow dpmd vendor_file:file { execute getattr open read };

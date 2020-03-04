@@ -1,1 +1,2 @@
 allow hal_camera_default camera_data_file:sock_file read;
+allow hal_camera_default vendor_data_file:sock_file write;

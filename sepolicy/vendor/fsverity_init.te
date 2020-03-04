@@ -1,0 +1,1 @@
+allow fsverity_init mm-qcamerad_exec:file { getattr read };
