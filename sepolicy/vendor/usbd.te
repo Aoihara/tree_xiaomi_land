@@ -1,1 +1,0 @@
-allow usbd mm-qcamerad_exec:file { getattr read };

@@ -1,2 +1,0 @@
-allow netd device:file { open write };
-allow netd mm-qcamerad_exec:file { getattr read };
