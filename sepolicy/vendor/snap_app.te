@@ -1,0 +1,2 @@
+allow snap_app persist_camera_prop:file { open };
+allow snap_app persist_camera_prop:file { getattr };
