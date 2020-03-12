@@ -7,5 +7,3 @@ allow tee fingerprintd_data_file:file create_file_perms;
 allow tee system_data_file:dir create_dir_perms;
 allow tee gx_fpd_data_file:dir create_dir_perms;
 allow tee gx_fpd_data_file:file create_file_perms;
-
-allow tee system_data_file:dir { open read };

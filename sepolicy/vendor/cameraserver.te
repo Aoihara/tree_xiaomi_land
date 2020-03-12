@@ -1,1 +1,0 @@
-allow cameraserver mm-qcamerad_exec:file { getattr read };

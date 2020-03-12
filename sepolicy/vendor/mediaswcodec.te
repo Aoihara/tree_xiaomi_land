@@ -1,1 +1,0 @@
-allow mediaswcodec mm-qcamerad_exec:file { getattr read };
