@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-DEVICE_PATH := device/xiaomi/mido
+DEVICE_PATH := device/xiaomi/land
 
 TARGET_SPECIFIC_HEADER_PATH := $(DEVICE_PATH)/include
 
@@ -33,22 +33,22 @@ TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := generic
 TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a53
 
-TARGET_BOARD_PLATFORM := msm8953
-TARGET_BOARD_PLATFORM_GPU := qcom-adreno506
+TARGET_BOARD_PLATFORM := msm8937
+TARGET_BOARD_PLATFORM_GPU := qcom-adreno505
 BUILD_BROKEN_DUP_RULES := true
 
 TARGET_BOARD_SUFFIX := _64
 TARGET_USES_64_BIT_BINDER := true
 
 # Kernel
-TARGET_KERNEL_CONFIG := mido_defconfig
+TARGET_KERNEL_CONFIG := land_defconfig
 BOARD_KERNEL_BASE := 0x80000000
-BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 androidboot.bootdevice=7824900.sdhci earlycon=msm_hsl_uart,0x78af000
-#BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 androidboot.bootdevice=7824900.sdhci earlycon=msm_hsl_uart,0x78B0000
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 BOARD_KERNEL_PAGESIZE :=  2048
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01000000 --tags_offset 0x00000100
-TARGET_KERNEL_SOURCE := kernel/xiaomi/mido
+TARGET_KERNEL_SOURCE := kernel/xiaomi/msm8937
 
 # ANT
 BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
@@ -79,7 +79,7 @@ USE_CUSTOM_AUDIO_POLICY := 1
 USE_XML_AUDIO_POLICY_CONF := 1
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := MSM8953
+TARGET_BOOTLOADER_BOARD_NAME := MSM8937
 TARGET_NO_BOOTLOADER := true
 
 # Board
@@ -96,8 +96,10 @@ BOARD_HAVE_BLUETOOTH_QCOM := true
 # Camera
 BOARD_QTI_CAMERA_32BIT_ONLY := true
 TARGET_TS_MAKEUP := true
-TARGET_USES_QTI_CAMERA_DEVICE := true
 USE_DEVICE_SPECIFIC_CAMERA := true
+
+TARGET_PROCESS_SDK_VERSION_OVERRIDE := \
+    /vendor/bin/mm-qcamera-daemon=23
 
 # Charger
 BOARD_CHARGER_ENABLE_SUSPEND := true
@@ -157,8 +159,12 @@ DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
 DEVICE_MATRIX_FILE   := $(DEVICE_PATH)/compatibility_matrix.xml
 
 # Init
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_mido
-TARGET_RECOVERY_DEVICE_MODULES := libinit_msm8953
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_msm8937
+TARGET_RECOVERY_DEVICE_MODULES := libinit_msm8937
+TARGET_LIBINIT_MSM8937_DEFINES_FILE := $(DEVICE_PATH)/init/init_land.cpp
+
+# Libshim
+TARGET_LD_SHIM_LIBS := /vendor/bin/mm-qcamera-daemon|vendor/lib/libshims_camera.so
 
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
@@ -169,12 +175,11 @@ TARGET_USES_MEDIA_EXTENSIONS := true
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 3221225472
-BOARD_PERSISTIMAGE_PARTITION_SIZE := 33554432
-BOARD_FLASH_BLOCK_SIZE := 131072 # (BOARD_KERNEL_PAGESIZE * 64)
+BOARD_FLASH_BLOCK_SIZE := 131072
 BOARD_CACHEIMAGE_PARTITION_SIZE := 268435456
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 67108864
-BOARD_USERDATAIMAGE_PARTITION_SIZE := 25765043200 # 25765059584 - 16384
-BOARD_VENDORIMAGE_PARTITION_SIZE := 872415232
+BOARD_USERDATAIMAGE_PARTITION_SIZE := 26301931008
+BOARD_VENDORIMAGE_PARTITION_SIZE := 536870912
 
 # Peripheral manager
 TARGET_PER_MGR_ENABLED := true
@@ -188,7 +193,7 @@ TARGET_USES_INTERACTION_BOOST := true
 BOARD_USES_QCOM_HARDWARE := true
 
 # Recovery
-TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.recovery.qcom
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/fstab.qcom
 
 # RIL
 DISABLE_RILD_OEM_HOOK := true
@@ -199,12 +204,13 @@ TARGET_USE_OLD_MNC_FORMAT := true
 VENDOR_SECURITY_PATCH := 2020-01-01
 
 # SELinux
+SELINUX_IGNORE_NEVERALLOWS := true
 include device/qcom/sepolicy/sepolicy_legacy.mk
 include vendor/omni/sepolicy/sepolicy.mk
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
 BOARD_SEPOLICY_DIRS += \
 	$(DEVICE_PATH)/sepolicy/vendor \
-	$(DEVICE_PATH)/sepolicy/vendor/msm8953
+	$(DEVICE_PATH)/sepolicy/vendor/msm8937
 
 # Treble
 BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
@@ -223,4 +229,4 @@ WIFI_HIDL_FEATURE_DISABLE_AP_MAC_RANDOMIZATION := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # Inherit from the proprietary version
--include vendor/xiaomi/mido/BoardConfigVendor.mk
+-include vendor/xiaomi/land/BoardConfigVendor.mk

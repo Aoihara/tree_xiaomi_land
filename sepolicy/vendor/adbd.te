@@ -1,3 +1,0 @@
-#============= adbd ==============
-allow adbd ctl_start_prop:property_service set;
-allow adbd self:capability sys_admin;

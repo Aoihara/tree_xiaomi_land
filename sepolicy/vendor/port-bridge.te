@@ -1,1 +1,0 @@
-allow port-bridge vendor_file:dir read;

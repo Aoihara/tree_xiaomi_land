@@ -1,5 +1,5 @@
 #
-# system.prop for mido
+# system.prop for land
 #
 # Audio
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -46,14 +46,13 @@ ro.bluetooth.hfp.ver=1.7
 
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
-camera.display.lmax=1280x720 \
-camera.display.umax=1920x1080 \
-camera.lowpower.record.enable=1 \
-media.camera.ts.monotonic=1 \
-persist.camera.gyro.disable=0 \
-persist.camera.isp.clock.optmz=0 \
-persist.camera.stats.test=5 \
+persist.vendor.camera.display.umax=1920x1080 \
+persist.vendor.camera.display.lmax=1280x720 \
 persist.vendor.qti.telephony.vt_cam_interface=1 \
+persist.camera.gyro.android=0 \
+persist.camera.HAL3.enabled=1 \
+persist.ts.rtmakeup=true \
+media.camera.ts.monotonic=1 \
 vidc.enc.dcvs.extra-buff-count=2
 
 # Cne
@@ -74,14 +73,14 @@ debug.sf.enable_hwc_vds=1 \
 debug.sf.hw=0 \
 debug.sf.latch_unsignaled=1 \
 debug.sf.recomputecrop=0 \
-debug.sf.enable_gl_backpressure=1 \
+debug.sf.enable_gl_backpressure=0 \
 dev.pm.dyn_samplingrate=1 \
 persist.demo.hdmirotationlock=false \
 persist.hwc.enable_vds=1 \
 persist.hwc.mdpcomp.enable=true \
 ro.opengles.version=196610 \
 ro.qualcomm.cabl=0 \
-ro.sf.lcd_density=420 \
+ro.sf.lcd_density=290 \
 ro.vendor.display.cabl=2 \
 sdm.debug.disable_skip_validate=1 \
 vendor.display.enable_default_color_mode=1 \
@@ -104,6 +103,18 @@ vendor.hw.fm.init=0
 # Frp
 PRODUCT_PROPERTY_OVERRIDES += \
 ro.frp.pst=/dev/block/bootdevice/by-name/config
+
+# LMKD
+PRODUCT_PRODUCT_PROPERTIES += \
+ro.lmk.low=1001 \
+ro.lmk.medium=800 \
+ro.lmk.critical=0 \
+ro.lmk.critical_upgrade=false \
+ro.lmk.upgrade_pressure=100 \
+ro.lmk.downgrade_pressure=100 \
+ro.lmk.kill_heaviest_task=true \
+ro.lmk.kill_timeout_ms=100 \
+ro.lmk.use_minfree_levels=true
 
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -128,6 +139,10 @@ vendor.video.disable.ubwc=1
 PRODUCT_PROPERTY_OVERRIDES += \
 ro.vendor.extension_library=libqti-perfd-client.so \
 ro.vendor.qti.sys.fw.bservice_enable=true
+
+# Properties
+PRODUCT_PROPERTY_OVERRIDES += \
+ro.ct.device.model=XMP-2016030
 
 # Netmgrd
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -199,3 +214,6 @@ wifi.interface=wlan0
 # Wifi-Display
 PRODUCT_PROPERTY_OVERRIDES += \
 persist.sys.wfd.virtual=0
+
+# Sim Selection Fix
+persist.vendor.radio.aosp_usr_pref_sel=true

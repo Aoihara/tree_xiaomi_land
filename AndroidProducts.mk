@@ -14,8 +14,8 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/omni_mido.mk
+    $(LOCAL_DIR)/omni_land.mk
 
 COMMON_LUNCH_CHOICES := \
-    omni_mido-userdebug
+    omni_land-userdebug
 
