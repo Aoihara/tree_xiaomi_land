@@ -173,6 +173,10 @@ PRODUCT_PACKAGES += \
     libqcomfm_jni \
     qcom.fmradio
 
+# fwk_detect
+PRODUCT_PACKAGES += \
+	libqti_vndfwk_detect
+
 # Gatekeeper HAL
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-impl \
@@ -336,11 +340,7 @@ PRODUCT_PACKAGES += \
     qti_telephony_utils.xml \
     telephony-ext
 
-# fwk_detect
-PRODUCT_PACKAGES += \
-	libqti_vndfwk_detect
-
-#PRODUCT_BOOT_JARS += \
+PRODUCT_BOOT_JARS += \
     telephony-ext
 
 # Seccomp policy
