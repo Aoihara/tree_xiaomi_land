@@ -768,6 +768,16 @@ vendor/firmware/a506_zap.mdt|2945f21b47cf35bf22d8cb68e937c34ea64212c0
 vendor/firmware/a530_pfp.fw|448f9db8271fefb08348cbc50409e8e95bd93f78
 vendor/firmware/a530_pm4.fw|5741a28752355b478d455635bab008028ff7e1c6
 
+# IOP-Perf - from Oneplus 3/3T
+vendor/lib/hw/vendor.qti.hardware.iop@2.0-impl.so|6fcbc5680b1029ad6bae9d7172c923eb675f4719 
+vendor/lib/libqti-iopd-client.so|5935fb7726ce8a50374fbd9602cdf84357c29de1 
+vendor/lib/vendor.qti.hardware.iop@1.0.so|0d01f19c65be3c8ce4140f5b816ce210e1adcc10 
+vendor/lib/vendor.qti.hardware.iop@2.0.so|b0f60aec5679bc2a49dba44008a8d75f2bacccb4 
+vendor/lib64/hw/vendor.qti.hardware.iop@2.0-impl.so|1dc51cb63feca20bca557a75cd0e9dea9124d9b1 
+vendor/lib64/libqti-iopd-client.so|4e10398b8be204271e0baf12cb671f312305fc74 
+vendor/lib64/vendor.qti.hardware.iop@1.0.so|1c39e304d5ab6c4ef4f1ea00b10e2ac7056214d9
+vendor/lib64/vendor.qti.hardware.iop@2.0.so|6acc2005f51164b6897d5a39556368e34b7793fd
+
 # Keystore - from LA.UM.8.6.r1-03400-89xx.0
 vendor/lib/hw/keystore.msm8953.so:vendor/lib/hw/keystore.msm8937.so|5dfcd92567254c5912c10ef2013e222b9fe33b03
 vendor/lib64/hw/keystore.msm8953.so:vendor/lib64/hw/keystore.msm8937.so|265cd4d0246f5e2e80916dd1c96262be28306b31
