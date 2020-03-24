@@ -14,8 +14,8 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/omni_land.mk
+    $(LOCAL_DIR)/du_land.mk
 
 COMMON_LUNCH_CHOICES := \
-    omni_land-userdebug
+    du_land-userdebug
 

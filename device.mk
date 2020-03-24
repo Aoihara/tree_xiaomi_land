@@ -122,7 +122,7 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service \
     camera.msm8937 \
-    Camera2
+    Snap
 
 # Charger
 include $(LOCAL_PATH)/rootdir/charger/charger.mk
