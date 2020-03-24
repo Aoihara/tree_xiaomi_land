@@ -32,7 +32,7 @@
     <bool name="config_smart_replies_in_notifications_requires_targeting_p">false</bool>
 
     <!-- Max visible notification icons -->
-    <integer name="config_maxVisibleNotificationIcons">10</integer>
-    <integer name="config_maxVisibleNotificationIconsWhenDark">10</integer>
+    <integer name="config_maxVisibleNotificationIcons">6</integer>
+    <integer name="config_maxVisibleNotificationIconsWhenDark">7</integer>
 
 </resources>
