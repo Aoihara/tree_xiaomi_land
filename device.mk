@@ -213,6 +213,9 @@ PRODUCT_PACKAGES += \
     ims-ext-common \
     ims_ext_common.xml
 
+# IPACM Data
+$(call inherit-product, device/xiaomi/land/data-ipa-cfg-mgr/ipacm_vendor_product.mk)
+
 # IPA Manager
 PRODUCT_PACKAGES += \
     ipacm \
