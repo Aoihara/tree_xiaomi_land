@@ -185,7 +185,7 @@ TARGET_TAP_TO_WAKE_NODE := "/sys/android_touch/doubletap2wake"
 TARGET_USES_INTERACTION_BOOST := true
 
 # Qualcomm
-BOARD_USES_QCOM_HARDWARE := true
+#BOARD_USES_QCOM_HARDWARE := true
 
 # Recovery
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.recovery.qcom

@@ -307,6 +307,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libjson
 
+# Qcom
+PRODUCT_BOARD_PLATFORM := msm8937
+PRODUCT_USES_QCOM_HARDWARE := true
+
 # Ramdisk
 PRODUCT_PACKAGES += \
     fstab.qcom \
